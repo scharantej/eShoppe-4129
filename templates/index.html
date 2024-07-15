@@ -1,0 +1,17 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>E-Commerce Website</title>
+</head>
+<body>
+<h1>Welcome to my E-Commerce Website</h1>
+<ul>
+{% for product in products %}
+<li><a href="{{ url_for('product_detail', product_id=product.id) }}">{{ product.name }}</a> - ${{ product.price }}</li>
+{% endfor %}
+</ul>
+</body>
+</html>
+
+
