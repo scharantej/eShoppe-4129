@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Shopping Cart</title>
+</head>
+<body>
+<h1>Shopping Cart</h1>
+<ul>
+{% for product in cart %}
+<li>{{ product.name }} - ${{ product.price }}</li>
+{% endfor %}
+</ul>
+<form action="{{ url_for('checkout') }}" method="post">
+<input type="submit" value="Checkout">
+</form>
+</body>
+</html>
+
+
