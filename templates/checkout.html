@@ -1,0 +1,18 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Checkout</title>
+</head>
+<body>
+<h1>Checkout</h1>
+<form action="{{ url_for('process_payment') }}" method="post">
+<p>Name: <input type="text" name="name"></p>
+<p>Address: <input type="text" name="address"></p>
+<p>Credit Card Number: <input type="text" name="credit_card_number"></p>
+<p>Expiration Date: <input type="text" name="expiration_date"></p>
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>
+
